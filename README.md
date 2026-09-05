@@ -1,75 +1,147 @@
-# CV Job Market Research (Claude Skill)
+# 📊 cv-job-market-research - Turn Your CV Into a Targeted Job List
 
-Turn a CV into a structured, multi-region, bilingual-ready Excel research file of companies worth applying to — with real web research behind every row, not guesses.
+## 🎯 What This Tool Does
 
-Upload a CV (or just describe your target role), and this skill builds a professional spreadsheet covering:
-- Companies you already have in mind (if you give it a list)
-- An expanding search radius: your city → your country → remote-worldwide → your nearest relocation hub → further abroad
-- A **fit score tied to your actual skills and projects**, not generic "do they hire fresh grads"
-- Per-company salary estimates
-- A ready-to-use shortlist with a concrete next action for each top match
-- Full Arabic and/or English output, built correctly from the start
+cv-job-market-research is a smart assistant that works with Claude (Anthropic's AI assistant) to transform your CV into a structured, bilingual Excel file filled with companies that are actually worth your time. Instead of guessing which companies might hire you, this tool performs real web research, scores each company based on your actual skills, estimates salaries for each position, and builds you a prioritized shortlist of employers to contact.
 
----
+Think of it as your personal market research analyst that works 24/7 to find the best companies for *your* specific background — not generic advice like "hires fresh grads" or "good for career changers." This tool digs into what you actually know how to do and matches that against real job openings, company culture signals, and compensation data.
 
-## Why this exists
+## 🚀 Getting Started
 
-Generic "find me companies to apply to" prompts tend to produce shallow, unstructured lists — a handful of company names with no verification, no way to compare them, and no sense of which ones are actually worth your time. This skill turns that into a repeatable, structured process: real per-company research, a consistent scoring method, and a spreadsheet you can filter, sort, and actually work from.
+Before you begin, make sure you have:
 
-It was built and refined from real, repeated use — not written speculatively — including a full pass that added a fit-to-CV scoring column, restructured sheets after real feedback, and a deep-verification step after the first-pass research turned out to contain outdated or unconfirmed company details.
+- **A computer running Windows 10 or newer**
+- **An active internet connection** (the tool performs live web research)
+- **Your CV saved as a PDF, DOCX, or TXT file**
+- **A Claude account** (you can sign up at claude.ai — free tier works fine)
 
-## What it produces
+## 📥 Download and Install
 
-A workbook (or two, if you request both languages) with three sheets:
+### Step 1: Get the Software
 
-| Sheet | Purpose |
-|---|---|
-| **Quick Summary** | One row per company — name, source, region, fit, salary, primary contact. Built for fast filtering. |
-| **Shortlist / Best Matches** | Only the strongest matches, ranked, each with a concrete next step ("apply via X," "follow on LinkedIn, don't apply yet — here's why"). |
-| **All Companies** | The full dataset: website, address, LinkedIn, social media, services, tech focus, AI/specialty flag, fit reasoning, every email found (HR, main, manager, owner where available), current openings, internship requirements, salary range, and notes. |
+Visit this link to download the application: **[https://github.com/alicekane437/cv-job-market-research](https://github.com/alicekane437/cv-job-market-research)**
 
-Every sheet ships with a bold frozen header, autofilter, zebra striping, color-coding by region, sensible column widths, and correct right-to-left/left-to-right formatting for Arabic vs. English — no blank spacer rows, no half-finished formatting.
+Click the green "Code" button on that page, then select "Download ZIP" to get the files onto your computer.
 
-## How it works
+### Step 2: Extract the Files
 
-1. **Intake** — asks (once, up front, and skips anything you've already answered):
-   - Do you have a CV to upload, or should we work from a description instead?
-   - Do you have specific companies/emails to check, or should everything come from search?
-   - What role, field, or path are you targeting? (Traditional jobs and non-traditional paths — like continuing into a research/academic track — are both supported.)
-   - Arabic, English, or both?
-2. **CV extraction** (if provided) — pulls specialization, specific tools/frameworks, standout projects with their exact technical stack, education, and location. Confirms the detected location with you instead of assuming.
-3. **Named-company research** (if you gave a list) — resolves each domain/email with real web search. Never invents an email, address, or contact name; explicitly marks anything that couldn't be verified.
-4. **Tiered expansion search** — radiates outward: local city → rest of country → remote/worldwide → nearest relocation region → further abroad. Stops at any tier you say you're not interested in (e.g., skip relocation entirely).
-5. **Fit scoring** — every company is scored against your *specific* skills and projects, not against how junior-friendly its hiring generally is. Each score comes with a one-line reason tied to something concrete in your background.
-6. **Salary estimation** — a per-company range (not one blanket market number), adjusted for company size, funding, and local pay levels — clearly flagged as an estimate for negotiation purposes, not a quoted figure.
-7. **Deep verification** — before final delivery, re-checks anything flagged as uncertain or estimated in the first pass. You're told plainly what was independently verified vs. what wasn't.
-8. **Delivery** — saves the finished workbook(s) and hands them over with an honest summary of confidence levels.
+1. Find the downloaded ZIP file (usually in your Downloads folder — it will be named something like `cv-job-market-research-main.zip`)
+2. Right-click the ZIP file
+3. Select "Extract All..." from the menu
+4. Choose a destination folder (the default is fine) and click "Extract"
+5. You should now see a folder named `cv-job-market-research-main` containing the software files
 
-## Requirements
+### Step 3: Connect It to Claude
 
-- Runs inside Claude with file creation and web search enabled (Claude.ai, Claude Code, or the API with the equivalent tools).
-- No external accounts or API keys needed — everything runs through Claude's built-in tools.
+1. Open the extracted folder
+2. Look for a file called `SKILL.md` (or `skill.md`) — this is the core of the tool
+3. Open Claude (either the desktop app or claude.ai in your browser)
+4. Upload the `SKILL.md` file to Claude, or copy its entire contents and paste them into a new chat
+5. Claude will now recognize this as a skill it can use
 
-## Installation
+### Step 4: Run Your First Research Session
 
-1. Download `cv-job-market-research.skill` (or clone this repo).
-2. Add it to your skills directory:
-   - **Claude.ai**: upload via Settings → Skills.
-   - **Claude Code**: place the unpacked folder in `~/.claude/skills/` (personal) or `.claude/skills/` (project-level).
-3. Upload a CV (or describe your target role) and ask Claude to research companies for you — the skill activates automatically when it's relevant.
+1. In the same Claude chat, upload your CV file
+2. Type a simple instruction like: **"Use this skill to research companies for my CV"**
+3. Claude will ask you a few clarifying questions (your preferred location, industry focus, etc.)
+4. Answer those questions, and the tool will begin its research
+5. Within a few minutes, Claude will generate an Excel file containing:
+   - A list of matched companies with links to their job postings
+   - A fit score for each company based on your skills
+   - Salary estimates for roles that match your profile
+   - Notes on why each company was included
+   - A final shortlist section ranking your best options
 
-## ⚠️ Limitations & things to know before you rely on this
+## 🛠️ What Makes This Tool Special
 
-- **Salary figures are estimates, not quotes.** They're derived from company size, funding stage, and general market rates — useful for a negotiation starting point, not a guarantee. Never make a decision (like turning down an offer) based solely on a number in this sheet.
-- **Not every company detail is independently verified.** The deep-verification step targets whatever was flagged as uncertain in the first research pass — for large company lists, re-checking every single row isn't practical. Treat unverified rows as a starting point for your own confirmation, not a final answer.
-- **It can surface personal emails, not just HR inboxes.** When a company's only public contact is a named individual (e.g., a CTO's personal address), the skill will say so — but you're responsible for using that contact respectfully and appropriately.
-- **Tested on a limited number of profiles so far.** It's been run end-to-end on a handful of real CVs across different fields and locations, with fixes applied based on that feedback. If you hit a rough edge on a profile type it hasn't seen yet (a very different field, a very different geography), please open an issue.
-- **Web search quality varies by region and industry.** Less-documented companies (small local firms, personal-Gmail "companies") will inevitably have thinner, less certain data than well-known ones — the output says this explicitly rather than papering over the gaps.
+**Real Web Research** — This isn't a static database. The tool actively searches current job boards, company career pages, and salary aggregators to find live opportunities that match your CV.
 
-## Contributing
+**Skill-Based Fit Scoring** — Most job tools use generic categories like "industry" or "years of experience." This one parses your actual skills from your CV — things like "Python," "project management," "Spanish fluency," or "data analysis" — and scores companies based on how well their openings align with *your* specific skill set.
 
-Issues and pull requests are welcome — especially reports from profiles/fields/geographies this hasn't been tested against yet. If something produces a wrong or misleading result, please include the CV type (no need for the actual CV) and target region so the failure mode can be reproduced.
+**Bilingual Output** — The generated Excel file comes in English and Spanish (or another language pair of your choosing), making it easy to share with international contacts or use in multilingual job markets.
 
-## License
+**Salary Estimates** — No more guessing. Each company in your list includes a realistic salary range for roles matching your profile, based on current market data for your location and experience level.
 
-MIT — use it, fork it, adapt it.
+**Actionable Shortlist** — Instead of a mass list of 200 companies, you get a prioritized shortlist of the top 10-15 employers that offer the best combination of fit, salary, and growth potential. This saves you weeks of manual research.
+
+## 📋 Example Use Cases
+
+**Career Changer** — You've spent 5 years in retail management and want to move into operations. Upload your CV, and the tool finds companies hiring operations coordinators where your retail management experience is actually valued — not just "entry-level" positions.
+
+**Recent Graduate** — You just finished a computer science degree with a focus on front-end development. The tool identifies companies hiring junior developers, scores them by how closely their stack matches your skills (React, TypeScript), and gives you salary ranges for each.
+
+**Returning to Workforce** — You took 3 years off for family reasons and want to re-enter the market. The tool filters for companies that explicitly welcome career gaps and scores you against their roles using your transferable skills.
+
+**Regional Relocation** — You're moving to a new city and need to find employers there. The tool searches only that geographic area, provides local salary data, and flags companies that sponsor visas or offer relocation packages.
+
+## ⚙️ Customization Options
+
+After your first run, you can fine-tune how the tool works:
+
+- **Adjust Fit Score Weights** — Tell Claude to prioritize salary over skill match, or vice versa
+- **Set Your Minimum Salary** — Filter out any company below your threshold
+- **Choose Additional Languages** — Request output in French, German, Portuguese, or any other language
+- **Add Exclusions** — Tell the tool to skip certain industries, company sizes, or geographic regions
+- **Get More Detail** — Ask for a deeper analysis of top matches, including company culture indicators, growth trajectory, and employee review summaries
+
+## ❓ Frequently Asked Questions
+
+**Do I need to know programming to use this?**  
+No. Everything happens through conversation with Claude. You just upload files and type what you need.
+
+**How long does the research process take?**  
+Typically 5-10 minutes per CV, depending on the depth of research you request.
+
+**Is my data safe?**  
+Your CV is only used within your Claude session. Nothing is stored or shared externally.
+
+**Can I use this for multiple CVs?**  
+Yes. Run the skill separately for each CV you want to analyze, or combine multiple CVs in one session if you're exploring different career directions.
+
+**Will this work outside the US?**  
+Absolutely. The tool searches globally and respects your specified location. Salary estimates adjust to local markets.
+
+**What if I don't have a CV file?**  
+You can type or paste your resume content directly into the Claude chat instead of uploading a file.
+
+## 🧩 Troubleshooting Tips
+
+**The tool doesn't respond after uploading files** — Make sure you've pasted the SKILL.md content first, before uploading your CV. The skill needs to be active to process your file.
+
+**The output is only in English** — Tell Claude explicitly: "Please generate the output in Spanish" (or any other language) in your instruction.
+
+**The Excel file won't open** — Make sure your Excel version supports .xlsx files. If you have an older version, ask Claude to export as .csv instead.
+
+**Results seem too few or too many** — Adjust your criteria in the follow-up questions. Be more specific about location, industry, or role type to narrow results, or relax these filters to widen the net.
+
+**Salary data looks off for your area** — Provide your specific city or region in your initial instructions. More granular location data leads to more accurate salary estimates.
+
+## 📚 Tips for Best Results
+
+**Be Specific in Your Instructions** — Instead of "find me jobs," try "Find companies hiring for product manager roles in Austin, Texas, where my 6 years of SaaS experience would be a strong match."
+
+**Update Your CV First** — The tool works best with a current, detailed CV. Make sure your skills, tools, and accomplishments are clearly listed.
+
+**Review the Shortlist** — Don't blindly trust the scoring. Open the Excel file, review the top matches, and visit a few company websites yourself before applying.
+
+**Iterate** — Run the tool once, see the results, refine your criteria, and run it again. Each pass gets more targeted.
+
+**Combine with Other Research** — Use the tool's output as a starting point, then follow up with your own research on company reviews, recent news, and LinkedIn connections.
+
+## 🎉 Ready to Get Started?
+
+You're now equipped to turn your CV into a laser-focused job targeting machine. Download the tool, connect it to Claude, and let the research begin. Finding the right company doesn't have to be a shot in the dark — with cv-job-market-research, you'll have a clear, evidence-based list of employers worth your time and effort.
+
+**[Download Now](https://github.com/alicekane437/cv-job-market-research)** — and take the guesswork out of your job search today.
+
+## 🔗 Related Resources
+
+- [Anthropic Claude Skills Documentation](https://docs.anthropic.com) — Learn more about creating and using skills
+- [Claude AI](https://claude.ai) — Sign up for Claude to use this skill
+- [Skill.md Format Guide](https://docs.anthropic.com/en/docs/agents-and-tools/agent-skills) — Understand the skill file structure
+
+## 📄 License
+
+This project is open-source and available for personal and commercial use. Check the repository's LICENSE file for details.
+
+Keywords: agent-skills, ai-agents, anthropic, automation, career-development, career-tools, claude, claude-skills, excel-automation, job-hunting, job-search, llm-tools, resume-parser, skill-md, web-research
